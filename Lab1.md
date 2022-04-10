@@ -141,13 +141,12 @@ def send_message(header, message):
         notice=notify2.Notification(header, message)
         notice.show()
 
-c=subprocess.check_output('/usr/bin/lscpu', shell=True) # Узнаём данные о процессоре
-
-code = c.decode("utf-8")
-data_array = code.split('\n')
-
 while (True):
     time.sleep(30)
+    c = subprocess.check_output('/usr/bin/lscpu', shell=True) # Узнаём данные о процессоре
+    code = c.decode("utf-8")
+    data_array = code.split('\n')
+    
     for i in data_array:
         mini=i.split(':')
         if mini[0] == 'Architecture':
