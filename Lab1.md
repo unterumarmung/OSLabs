@@ -1,4 +1,4 @@
-# Тема: 
+# Тема: Работа с оповещениями в Linux
 
 ## Часть 0: настраиваем clipboard sharing в VirtualBox
 
